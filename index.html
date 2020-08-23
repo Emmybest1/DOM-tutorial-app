@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
-    <meta name="application-name" content="New Feed" />
-    <meta name="keywords" content="Frontend master, New feed,New app" />
+    <meta name="application-name" content="DOM Tutorial " />
+    <meta name="keywords" content="DOM Tutorial, Frontend master AfricLite, YouMustKnowJs" />
     <meta name="author" content="Emmanuel Onah" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM Tutorial | AfricLite | YouMustKnowJs</title>
@@ -17,6 +19,7 @@
     <link rel="stylesheet" href="/source/styles/__GeneralSettings.css" />
     <link rel="stylesheet" href="/source/styles/__Index.css" />
   </head>
+
   <body>
     <div class="__container" role="main">
       <div class="__bg__wrapper" role="rowgroup">
@@ -30,5 +33,24 @@
     </div>
     <!-- Script -->
     <script src="./source/scripts/&__script.js" defer></script>
+
+    <script>
+      const documentNodeList = document.querySelectorAll('div');
+      const documentHtmlCollection = document.getElementsByTagName('div');
+
+      console.log('For NodeList', documentNodeList);
+      console.log('For HtmlCollection', documentHtmlCollection);
+
+      const convertHTMLCollection = Array.from(documentHtmlCollection);
+      const convertNodeList = Array.from(documentNodeList);
+      console.log('NodeListConversion', convertNodeList);
+      console.log('HTMLCollectionConversion', convertHTMLCollection);
+
+      console.log(convertNodeList);
+      convertNodeList.forEach(div => {
+        if (div.className === '__bg__wrapper') console.log(div);
+        else console.log('HEYYYYY AFRICLITE');
+      });
+    </script>
   </body>
 </html>
