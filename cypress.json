@@ -1,1 +1,1 @@
-{}
+{ "baseUrl": "http://localhost:3001", "ignoreTestFiles": "**/examples/*.spec.js", "viewportHeight": 768, "viewportWidth": 1024 }
